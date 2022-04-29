@@ -4,11 +4,11 @@
     ViewBag.Title = "Login";
 }
 <h2>Login</h2>
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">        
+
+    <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -52,11 +52,15 @@
 }
 
 <div>
-    @Html.ActionLink("Register Now", "Registration","User")
+    @Html.ActionLink("Register Now", "Registration", "User")
 </div>
 
 <div>
     @Html.ActionLink("Forgot Password?", "ForgotPassword", "User")
+</div>
+
+<div>
+    @Html.ActionLink("Forgot UserName?", "UserName", "User")
 </div>
 
 
